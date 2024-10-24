@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Include jQuery -->
+    <style>
+        .diagonal-bg {
+            background: linear-gradient(135deg, #4B0082 50%, #f3f4f6 50%);
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+            position: relative;
+            top: -65px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #4B0082;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+        }
+
+        .service-card {
+            padding-top: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .hover-effect {
+            transition: transform 1s; /* Smooth transition for rotation */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100">
+    <div class="diagonal-bg">
+        <div class="container mx-auto px-4">
+            <div class="pt-16">
+                <h2 class="text-4xl font-bold text-white text-left">OUR SERVICES</h2>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div class="bg-white service-card p-6 text-center rounded-lg hover-effect">
+                    <div class="icon-circle">
+                        <img src="flow_12944534.png" alt="Emergency Plumbing Icon" class="icon">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Emergency Plumbing Services</h3>
+                    <p class="text-gray-600 my-4">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+                    <a href="#" class="text-purple-700 font-bold hover:underline">EXPLORE THIS SERVICE &rarr;</a>
+                </div>
+
+                <div class="bg-white service-card p-6 text-center rounded-lg hover-effect">
+                    <div class="icon-circle">
+                        <img src="rain_463976.png" alt="Plumbing Icon" class="icon">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Plumbing and Drains</h3>
+                    <p class="text-gray-600 my-4">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+                    <a href="#" class="text-purple-700 font-bold hover:underline">EXPLORE THIS SERVICE &rarr;</a>
+                </div>
+
+                <div class="bg-white service-card p-6 text-center rounded-lg hover-effect">
+                    <div class="icon-circle">
+                        <img src="warm_13252912.png" alt="Water Damage Icon" class="icon">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Water Damage</h3>
+                    <p class="text-gray-600 my-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+                    <a href="#" class="text-purple-700 font-bold hover:underline">EXPLORE THIS SERVICE &rarr;</a>
+                </div>
+
+                <div class="bg-white service-card p-6 text-center rounded-lg hover-effect">
+                    <div class="icon-circle">
+                        <img src="water-heater_8957002.png" alt="Water Heater Icon" class="icon">
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800">Water Heaters</h3>
+                    <p class="text-gray-600 my-4">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p>
+                    <a href="#" class="text-purple-700 font-bold hover:underline">EXPLORE THIS SERVICE &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.hover-effect').hover(
+                function () {
+                    $(this).css('transform', 'rotate(360deg)'); // Rotate on hover
+                },
+                function () {
+                    $(this).css('transform', 'rotate(0deg)'); // Reset rotation
+                }
+            );
+        });
+    </script>
+</body>
+
+</html>
